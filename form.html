@@ -8,14 +8,18 @@
     <title>Registration form</title>
 
     <style>
+        h1 {
+            text-align: center;
+        }
+        
         .contanier {
             border: 5px solid black;
             padding: 16px;
-            width: 50%;
         }
         
         input[type=text],
-        input[type=email] {
+        input[type=email],
+        input[type=password] {
             padding: 15px;
             margin: 5px;
             display: inline-block;
@@ -31,6 +35,8 @@
         .regbtn {
             background-color: lightgreen;
             border: none;
+            padding: 15px;
+            margin: 5px;
         }
     </style>
 </head>
@@ -39,6 +45,7 @@
 
     <form>
         <div class="contanier">
+            <h1>Registration Form</h1>
             <label for="fname"><b>First Name</b></label><br>
             <input type="text" id="fname" name="fname" placeholder="Enter First Name" required><br>
 
@@ -48,13 +55,19 @@
             <label for="email"><b>Email</b></label><br>
             <input type="email" id="emali" name="email" placeholder="Enter Email" required><br>
 
+            <label for="psw"><b>Password</b></label><br>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw" required><br>
+
+            <label for="psw-repeat"><b>Repeat Password</b></label><br>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required><br>
+
             <label for="gender"><b>Gender</b></label><br>
             <input type="radio" id="male" name="gender" style="padding: 15px; margin: 5px;">
             <label for="male" style="padding: 5px; margin: 5px;">Male</label>
             <input type="radio" id="female" name="gender">
             <label for="female" style="padding: 5px; margin: 5px;">Female</label><br>
 
-            <button type="submit" class="regbtn">Register</button>
+            <button type="submit" class="regbtn"><b>Register</b></button>
         </div>
     </form>
 
