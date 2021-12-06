@@ -8,6 +8,64 @@
     <link rel="stylesheet" href="form.css">
     <title>Registration form</title>
 
+    <script>
+        function FormValidation() {
+            var fname = document.forms["RegForm"]["fname"];
+            var fnameerror = document.getElementById("fnameerror")
+            var lname = document.forms["RegForm"]["lname"];
+            var lnameerror = document.getElementById("lnameerror")
+            var email = document.forms["RegForm"]["email"];
+            var emailerror = document.getElementById("emailerror")
+            var password = document.forms["RegForm"]["psw"];
+            var passrep = document.forms["RegForm"]["pswrepeat"];
+            var birthady = document.forms["RegForm"]["birthday"];
+            var remember = document.forms["RegForm"]["remember"];
+
+            if (fname.value == "") {
+                fnameerror.innerHTML = "<span style='color: red;'>" + "* Please Enter a First Name</span>"
+                fname.focus();
+                return false;
+            }
+
+            if (lname.value == "") {
+                lnameerror.innerHTML = "<span style='color: red;'>" + "* Please Enter a Last name</span>"
+                lname.focus();
+                return false;
+            }
+
+            if (email.value == "") {
+                emailerror.innerHTML = "<span style='color: red;'>" + "* Please Enter a valid Email</span>"
+                email.focus();
+                return false;
+            }
+
+            if (password.value == "") {
+                window.alert("Please Enter Password.");
+                password.focus();
+                return false;
+            }
+
+            if (passrep.value == "") {
+                window.alert("Please enter Repeat Password");
+                passrep.focus();
+                return false;
+            }
+
+            if (birthady.value == "") {
+                window.alert("Please enter your Birth Date");
+                birthady.focus();
+                return false;
+            }
+
+            if (remember.value == "") {
+                window.alert("Please Click Remeber Checkbox");
+                remember.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+
 </head>
 
 <body>
@@ -16,13 +74,16 @@
         <div class="contanier">
             <h1>Registration Form</h1>
             <label for="fname"><b>First Name</b></label><br>
-            <input type="text" id="fname" name="fname" placeholder="Enter First Name"><br>
+            <input type="text" id="fname" name="fname" placeholder="Enter First Name">
+            <span id="fnameerror"></span><br>
 
             <label for="lname"><b>Last Name</b></label><br>
-            <input type="text" id="lname" name="lname" placeholder="Enter Last Name"><br>
+            <input type="text" id="lname" name="lname" placeholder="Enter Last Name">
+            <span id="lnameerror"></span><br>
 
             <label for="email"><b>Email</b></label><br>
-            <input type="email" id="emali" name="email" placeholder="Enter Email"><br>
+            <input type="email" id="emali" name="email" placeholder="Enter Email">
+            <span id="emailerror"></span><br>
 
             <label for="psw"><b>Password</b></label><br>
             <input type="password" placeholder="Enter Password" name="psw" id="psw"><br>
@@ -49,63 +110,5 @@
     </form>
 
 </body>
-
-<script>
-    function FormValidation() {
-        var fname = document.forms["RegForm"]["fname"];
-        var lname = document.forms["RegForm"]["lname"];
-        var email = document.forms["RegForm"]["email"];
-        var password = document.forms["RegForm"]["psw"];
-        var passrep = document.forms["RegForm"]["pswrepeat"];
-        var birthady = document.forms["RegForm"]["birthday"];
-        var remember = document.forms["RegForm"]["remember"];
-
-        if (fname.value == "") {
-            window.alert("Please enter your First Name.");
-            // fname.innerHTML = "<span style='color: red;'>" + "Please enter a first name</span>"
-            fname.focus();
-            return false;
-        }
-
-        if (lname.value == "") {
-            window.alert("Please enter your Last Name.");
-            lname.focus();
-            return false;
-        }
-
-        if (email.value == "") {
-            window.alert(
-                "Please enter a valid e-mail address.");
-            email.focus();
-            return false;
-        }
-
-        if (password.value == "") {
-            window.alert(
-                "Please Enter Password.");
-            password.focus();
-            return false;
-        }
-
-        if (passrep.value == "") {
-            window.alert("Please enter Repeat Password");
-            passrep.focus();
-            return false;
-        }
-
-        if (birthady.value == "") {
-            window.alert("Please enter your Birth Date");
-            birthady.focus();
-            return false;
-        }
-
-        if (remember.value == "") {
-            window.alert("Please Click Remeber Checkbox");
-            remember.focus();
-            return false;
-        }
-        return true;
-    }
-</script>
 
 </html>
