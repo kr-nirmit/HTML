@@ -12,23 +12,23 @@
 
 <body>
 
-    <form>
+    <form name="RegForm" onsubmit="return FormValidation()">
         <div class="contanier">
             <h1>Registration Form</h1>
             <label for="fname"><b>First Name</b></label><br>
-            <input type="text" id="fname" name="fname" placeholder="Enter First Name" required><br>
+            <input type="text" id="fname" name="fname" placeholder="Enter First Name"><br>
 
             <label for="lname"><b>Last Name</b></label><br>
-            <input type="text" id="lname" name="lname" placeholder="Enter Last Name" required><br>
+            <input type="text" id="lname" name="lname" placeholder="Enter Last Name"><br>
 
             <label for="email"><b>Email</b></label><br>
-            <input type="email" id="emali" name="email" placeholder="Enter Email" required><br>
+            <input type="email" id="emali" name="email" placeholder="Enter Email"><br>
 
             <label for="psw"><b>Password</b></label><br>
-            <input type="password" placeholder="Enter Password" name="psw" id="psw" required><br>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw"><br>
 
             <label for="pswrepeat"><b>Repeat Password</b></label><br>
-            <input type="password" placeholder="Repeat Password" name="pswrepeat" id="pswrepeat" required><br>
+            <input type="password" placeholder="Repeat Password" name="pswrepeat" id="pswrepeat"><br>
 
             <label for="gender"><b>Gender</b></label><br>
             <input type="radio" id="male" name="gender">
@@ -39,9 +39,9 @@
             <label for="other"> Other</label><br>
 
             <label for="birthday"><b>Birth Date</b></label><br>
-            <input type="date" id="birthday" name="birthday">
+            <input type="date" id="birthday" name="birthday"><br>
 
-            <input type="checkbox" id="remember" name="remember" required>
+            <input type="checkbox" id="remember" name="remember">
             <label for="remember"><b>Remember Me</b></label><br>
 
             <button type="submit" class="regbtn" style="font-size: medium;"><b>Register</b></button>
@@ -49,5 +49,63 @@
     </form>
 
 </body>
+
+<script>
+    function FormValidation() {
+        var fname = document.forms["RegForm"]["fname"];
+        var lname = document.forms["RegForm"]["lname"];
+        var email = document.forms["RegForm"]["email"];
+        var password = document.forms["RegForm"]["psw"];
+        var passrep = document.forms["RegForm"]["pswrepeat"];
+        var birthady = document.forms["RegForm"]["birthday"];
+        var remember = document.forms["RegForm"]["remember"];
+
+        if (fname.value == "") {
+            window.alert("Please enter your First Name.");
+            // fname.innerHTML = "<span style='color: red;'>" + "Please enter a first name</span>"
+            fname.focus();
+            return false;
+        }
+
+        if (lname.value == "") {
+            window.alert("Please enter your Last Name.");
+            lname.focus();
+            return false;
+        }
+
+        if (email.value == "") {
+            window.alert(
+                "Please enter a valid e-mail address.");
+            email.focus();
+            return false;
+        }
+
+        if (password.value == "") {
+            window.alert(
+                "Please Enter Password.");
+            password.focus();
+            return false;
+        }
+
+        if (passrep.value == "") {
+            window.alert("Please enter Repeat Password");
+            passrep.focus();
+            return false;
+        }
+
+        if (birthady.value == "") {
+            window.alert("Please enter your Birth Date");
+            birthady.focus();
+            return false;
+        }
+
+        if (remember.value == "") {
+            window.alert("Please Click Remeber Checkbox");
+            remember.focus();
+            return false;
+        }
+        return true;
+    }
+</script>
 
 </html>
