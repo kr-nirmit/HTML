@@ -9,34 +9,50 @@
 
     <style>
         .contanier {
-            border: 1px solid black;
+            border: 5px solid black;
             padding: 16px;
+            width: 50%;
         }
         
         input[type=text],
         input[type=email] {
-            width: 100%;
             padding: 15px;
             margin: 5px;
             display: inline-block;
             border: none;
             background: #f1f1f1;
         }
+        
+        #male {
+            padding: 15px;
+            margin: 5px;
+        }
+        
+        .regbtn {
+            background-color: lightgreen;
+            border: none;
+        }
     </style>
 </head>
 
 <body>
 
-    <form width:100%>
+    <form>
         <div class="contanier">
-            <label for="fname"><b>First name</b></label><br>
+            <label for="fname"><b>First Name</b></label><br>
             <input type="text" id="fname" name="fname" placeholder="Enter First Name" required><br>
 
-            <label for="lname"><b>Last name</b></label><br>
+            <label for="lname"><b>Last Name</b></label><br>
             <input type="text" id="lname" name="lname" placeholder="Enter Last Name" required><br>
 
             <label for="email"><b>Email</b></label><br>
             <input type="email" id="emali" name="email" placeholder="Enter Email" required><br>
+
+            <label for="gender"><b>Gender</b></label><br>
+            <input type="radio" id="male" name="gender" style="padding: 15px; margin: 5px;">
+            <label for="male" style="padding: 5px; margin: 5px;">Male</label>
+            <input type="radio" id="female" name="gender">
+            <label for="female" style="padding: 5px; margin: 5px;">Female</label><br>
 
             <button type="submit" class="regbtn">Register</button>
         </div>
