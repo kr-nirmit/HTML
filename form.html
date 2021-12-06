@@ -30,6 +30,15 @@
             border: none;
         }
         
+        input[type=radio] {
+            margin: 15px;
+            margin-right: 0px;
+        }
+        
+        input[type=checkbox] {
+            margin: 15px 5px 15px 0;
+        }
+        
         .regbtn {
             background-color: lightgreen;
             border: none;
@@ -61,12 +70,15 @@
             <input type="password" placeholder="Repeat Password" name="pswrepeat" id="pswrepeat" required><br>
 
             <label for="gender"><b>Gender</b></label><br>
-            <input type="radio" id="male" name="gender" style="margin: 20px 5px 0 20px;">
-            <label for="gender">Male</label>
-            <input type="radio" id="female" name="gender" style="margin: 20px 5px 0 20px;">
-            <label for="gender" style="margin-right: 20px;">Female</label>
-            <input type="radio" id="other" name="gender" style="margin-right: 5px;">
-            <label for="gender">Other</label><br>
+            <input type="radio" id="male" name="gender">
+            <label for="male"> Male</label>
+            <input type="radio" id="female" name="gender">
+            <label for="female"> Female</label>
+            <input type="radio" id="other" name="gender">
+            <label for="other"> Other</label><br>
+
+            <input type="checkbox" id="remember" name="remember" required>
+            <label for="remember"><b>Remember Me</b></label><br>
 
             <button type="submit" class="regbtn" style="font-size: medium;"><b>Register</b></button>
         </div>
