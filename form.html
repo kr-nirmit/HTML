@@ -8,13 +8,17 @@
     <title>Registration form</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+        
         h1 {
             text-align: center;
         }
         
         .contanier {
             border: 5px solid black;
-            padding: 16px;
+            padding: 15px;
         }
         
         input[type=text],
@@ -22,19 +26,14 @@
         input[type=password] {
             padding: 15px;
             margin: 5px;
-            display: inline-block;
+            width: 100%;
             border: none;
-            background: #f1f1f1;
-        }
-        
-        #male {
-            padding: 15px;
-            margin: 5px;
         }
         
         .regbtn {
             background-color: lightgreen;
             border: none;
+            width: 100%;
             padding: 15px;
             margin: 5px;
         }
@@ -62,10 +61,10 @@
             <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required><br>
 
             <label for="gender"><b>Gender</b></label><br>
-            <input type="radio" id="male" name="gender" style="padding: 15px; margin: 5px;">
-            <label for="male" style="padding: 5px; margin: 5px;">Male</label>
-            <input type="radio" id="female" name="gender">
-            <label for="female" style="padding: 5px; margin: 5px;">Female</label><br>
+            <input type="radio" id="male" name="gender" style="margin: 20px 5px 0 20px;">
+            <label for="male" style="margin-right: 20px;">Male</label>
+            <input type="radio" id="female" name="gender" style="margin-right: 5px;">
+            <label for="female">Female</label><br>
 
             <button type="submit" class="regbtn"><b>Register</b></button>
         </div>
